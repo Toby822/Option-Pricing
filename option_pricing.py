@@ -6,3 +6,8 @@ def call_price(S, K, T, r, sigma):
     d2 = d1 - sigma * np.sqrt(T)
 
     return S * norm.cdf(d1) - K * np.exp(-r * T) * norm.cdf(d2)
+S = 100
+
+price = call_price(S, 100, 1, 0.05, 0.20)
+
+print("Call Option Price:", price)
